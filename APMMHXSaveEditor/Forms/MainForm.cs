@@ -157,7 +157,7 @@ namespace APMMHXSaveEditor
                     MessageBox.Show("No file loaded!", "Error");
                     return;
                 }
-                DialogResult dialogResult = MessageBox.Show("Do you want to save?", "Save?", MessageBoxButtons.YesNo);
+                DialogResult dialogResult = MessageBox.Show("Voulez-vous sauvegarder?", "Sauvegarder?", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.No)
                 {
                     return;
@@ -170,7 +170,7 @@ namespace APMMHXSaveEditor
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Save Unsucessful");
+                MessageBox.Show(ex.Message, "Sauvegarde échouée");
             }
         }
 
@@ -178,7 +178,7 @@ namespace APMMHXSaveEditor
         {
             if (saveFile == null)
             {
-                MessageBox.Show("Load a file first!");
+                MessageBox.Show("Chargez d'abord une sauvegarde !");
                 return;
             }
             try
@@ -198,13 +198,13 @@ namespace APMMHXSaveEditor
                         File.WriteAllBytes(sfd.FileName, dataExtractor.FileData);
                         this.filePath = sfd.FileName;
                         this.Text = string.Format("{0} [{1}]", Constants.EDITOR_VERSION, Path.GetFileName(filePath));
-                        MessageBox.Show("Save Complete!");
+                        MessageBox.Show("Sauvegarde terminée !");
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Save Unsucessful");
+                MessageBox.Show(ex.Message, "Sauvegarde échouée");
             }
         }
 
@@ -242,7 +242,7 @@ namespace APMMHXSaveEditor
         {
             if (saveFile == null || saveFile.Players == null || (saveFile.Players[0] == null && saveFile.Players[1] == null && saveFile.Players[2] == null))
             {
-                MessageBox.Show("Load a file first");
+                MessageBox.Show("Chargez d'abord une sauvegarde !");
                 return;
             }
 
@@ -284,16 +284,16 @@ namespace APMMHXSaveEditor
             Player p = saveFile.Players[slot];
 
             //General Tab
-            textBoxPlayerName.Text = p.Name;
-            numericUpDownHrLevel.Value = p.HunterRank;
-            numericUpDownHrPoints.Value = p.HRPoints;
+            textBoxPlayerName.Text = p.Nom;
+            numericUpDownHrLevel.Value = p.RangChasseur;
+            numericUpDownHrPoints.Value = p.PointsRC;
             numericUpDownZenny.Value = p.Zenny;
-            numericUpDownAcademyPoints.Value = p.AcademyPoints;
-            numericUpDownBerunaPoints.Value = p.BerunaPoints;
-            numericUpDownKokotoPoints.Value = p.KokotoPoints;
-            numericUpDownPokkePoints.Value = p.PokkePoints;
-            numericUpDownYukumoPoints.Value = p.YukumoPoints;
-            numericUpDownPlayTime.Value = p.PlayTime;
+            numericUpDownAcademyPoints.Value = p.PointsWycadémie;
+            numericUpDownBerunaPoints.Value = p.PointsBeruna;
+            numericUpDownKokotoPoints.Value = p.PointsKokoto;
+            numericUpDownPokkePoints.Value = p.PointsPokke;
+            numericUpDownYukumoPoints.Value = p.PointsYukumo;
+            numericUpDownPlayTime.Value = p.Tempsdejeu;
 
             //Player Tab
             comboBoxGender.SelectedIndex = p.Gender;
