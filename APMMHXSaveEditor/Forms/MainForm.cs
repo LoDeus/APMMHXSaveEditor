@@ -293,20 +293,20 @@ namespace APMMHXSaveEditor
             numericUpDownKokotoPoints.Value = p.PointsKokoto;
             numericUpDownPokkePoints.Value = p.PointsPokke;
             numericUpDownYukumoPoints.Value = p.PointsYukumo;
-            numericUpDownPlayTime.Value = p.Tempsdejeu;
+            numericUpDownPlayTime.Value = p.TempsDeJeu;
 
             //Player Tab
-            comboBoxGender.SelectedIndex = p.Gender;
-            numericUpDownHair.Value = p.HairStyle;
-            numericUpDownFace.Value = p.Face;
+            comboBoxGender.SelectedIndex = p.Sexe;
+            numericUpDownHair.Value = p.Coiffure;
+            numericUpDownFace.Value = p.Visage;
             numericUpDownFeatures.Value = p.Features;
-            numericUpDownVoice.Value = p.Voice;
-            numericUpDownEyeColor.Value = p.EyeColor;
-            numericUpDownClothing.Value = p.Clothing;
-            numericUpDownHuntingStyle.Value = p.HuntingStyle;
-            numericUpDownHunterArt1.Value = p.HunterArt1;
-            numericUpDownHunterArt2.Value = p.HunterArt2;
-            numericUpDownHunterArt3.Value = p.HunterArt3;
+            numericUpDownVoice.Value = p.Voix;
+            numericUpDownEyeColor.Value = p.CouleurDesYeux;
+            numericUpDownClothing.Value = p.Vêtements;
+            numericUpDownHuntingStyle.Value = p.StyleDeChasse;
+            numericUpDownHunterArt1.Value = p.ArtDeChasse1;
+            numericUpDownHunterArt2.Value = p.ArtDeChasse2;
+            numericUpDownHunterArt3.Value = p.ArtDeChasse3;
             textBoxSkinColorRGBA.Text = BitConverter.ToString(p.SkinColorRGBA).Replace("-", "");
             textBoxHairColorRGBA.Text = BitConverter.ToString(p.HairColorRGBA).Replace("-", "");
             textBoxFeaturesColorRGBA.Text = BitConverter.ToString(p.FeaturesColorRGBA).Replace("-", "");
